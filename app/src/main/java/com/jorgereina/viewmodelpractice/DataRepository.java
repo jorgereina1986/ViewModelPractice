@@ -86,5 +86,17 @@ public class DataRepository {
         player.setTitles(4);
 
         playerDetails.put("Kevin Anderson", player);
+
+        player = new Player();
+        player.setName("Marin Cilic");
+        player.setAge(26);
+        player.setCountry("Ecuador");
+        player.setRank(6);
+        player.setTitles(4);
+
+        playerDetails.put("Marin Cilic", player);
+
+
+
     }
 }

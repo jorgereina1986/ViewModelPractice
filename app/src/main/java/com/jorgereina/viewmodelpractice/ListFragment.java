@@ -54,6 +54,13 @@ public class ListFragment extends Fragment {
                 TextView tv = (TextView) itemView;
                 Toast.makeText(ListFragment.this.getContext(), tv.getText().toString(), Toast.LENGTH_SHORT).show();
                 viewModel.selectedPlayer(tv.getText().toString());
+
+                getActivity()
+                        .getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.fragment_container, new DetailsFragment())
+                        .addToBackStack(null)
+                        .commit();
             }
         });
     }
